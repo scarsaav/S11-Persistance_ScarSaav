@@ -33,7 +33,7 @@ public class MiniJeu : MonoBehaviour
        
         Debug.Log("Defaite!");
 
-        float recordActuel = PlayerPrefs.GetFloat("MeilleurScoreTemps", 0f);
+        float recordActuel = PlayerPrefs.GetFloat("meilleurScoreTemps", 0f);
         if (pointageTemps >= recordActuel)
         {
             Invoke("MontrerPanneauNouveauRecord", 3f);
