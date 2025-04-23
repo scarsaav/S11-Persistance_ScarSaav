@@ -21,12 +21,12 @@ public class MeilleurScoreTemps : MonoBehaviour
 
     private void Update()
     {
-        if(_jeu.pointageTemps > meilleurScore)
+        if(_jeu.pointageTemps  > meilleurScore) //pointageTemps=c'est le pointage actuel et cette function est pour voir si mon pointage actuel est meilleur que l'anterieur
         {
             meilleurScore = _jeu.pointageTemps;
 
             PlayerPrefs.SetFloat("meilleurScore", meilleurScore);
-            textMeilleurScore.text = "Meilleur score "+DateTime.Now.ToString("g")+" : " + meilleurScore.ToString("00.00");
+            textMeilleurScore.text = "Meilleur score: " + meilleurScore.ToString("00.00");
         }
     }
 }
